@@ -6,7 +6,19 @@
 </head>
 <body>
     <h1>Welcome to Redhill</h1>
-    <form action="/" method="post">
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Definition</th>
+        </tr>
+        {% for w in words %}
+            <tr>
+                <td>{{ w.name }}</td>
+                <td>{{ w.definition }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <form name="form" action="" method="post">
         {% csrf_token %}
         {{ form.as_p }}
         <input type="submit" value="Submit">
