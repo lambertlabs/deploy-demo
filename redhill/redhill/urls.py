@@ -16,11 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
-from .. import wordlist
-
-
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include(wordlist.urls))
+    path('', include('wordlist.urls'))
 ]
