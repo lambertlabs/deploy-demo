@@ -1,0 +1,8 @@
+channels:
+  - pypi
+dependencies:
+  - django=2.2
+  - flake8
+  - psycopg2
+  - python=3.6.8
+  - sqlparse
