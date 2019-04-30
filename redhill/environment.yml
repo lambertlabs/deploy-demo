@@ -3,6 +3,7 @@ channels:
 dependencies:
   - django=2.2
   - flake8
+  - gunicorn
   - psycopg2
   - python=3.6.8
   - sqlparse
