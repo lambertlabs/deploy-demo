@@ -8,7 +8,7 @@ echo Updating conda...
 conda update conda
 
 echo Building environment...
-conda env update --name root -f environment.yml
+conda env update --name root -f redhill/environment.yml
 
 # Install packages
 apt-get install shellcheck
