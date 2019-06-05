@@ -1,2 +1,7 @@
 *.pyc
 .idea/*
+cloud_sql_proxy
+keys/*
+kube_secrets/*
+kubernetes_notes.txt
+**/static_files
