@@ -12,4 +12,5 @@ def homepage(request):
             form.save()
             return HttpResponseRedirect(request.path_info)
     form = WordForm()
-    return render(request, 'home.html', context={'form': form, 'words': Word.objects.all()})
+    words = Word.objects.all()
+    return render(request, 'home.html', context={'form': form, 'words': words})

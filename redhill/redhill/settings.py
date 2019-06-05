@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ['RED_DJANGO_SECRET']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '35.230.157.3']
 
 
 # Application definition
@@ -81,7 +81,7 @@ DATABASES = {
         'USER': os.environ['RED_DATABASE_USER'],
         'PASSWORD': os.environ['RED_DATABASE_PASS'],
         'HOST': '127.0.0.1',
-        'PORT': '5432',
+        'PORT': '5431',
     }
 }
 
@@ -122,4 +122,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = 'http://storage.googleapis.com/redhill-bucket/static/'
+STATIC_ROOT = os.path.join(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'static_files'
+)
